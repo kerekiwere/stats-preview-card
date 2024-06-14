@@ -1,0 +1,135 @@
+@import url('reset.css');
+
+/* ========== VARIABLES ========== */
+:root {
+  /* Colors */
+  --clr-very-dark-blue: hsl(233, 47%, 7%);
+  --clr-dark-desaturated-blue: hsl(244, 38%, 16%);
+  --clr-soft-violet: hsl(277, 64%, 61%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-translucent-white-75: hsla(0, 0%, 100%, 0.75);
+  --clr-translucent-white-60: hsla(0, 0%, 100%, 0.6);
+  /* Typography */
+  --ff-primary: "Inter", sans-serif;
+  --ff-secondary: "Lexend Deca", sans-serif;
+  --fs-300: 0.725rem;
+  --fs-400: 0.938rem;
+  --fs-500: 1.5rem;
+  --fs-700: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* Typography */
+    --fs-700: 2.25rem;
+  }
+}
+
+/* ========== GLOBAL ========== */
+body {
+  background-color: var(--clr-very-dark-blue);
+  color: var(--clr-translucent-white-60);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: var(--fs-700);
+  color: var(--clr-white);
+  margin-bottom: 0.5em;
+  line-height: 1.1;
+}
+
+p {
+  margin-bottom: 2em;
+}
+
+/* ========== UTILITIES ========== */
+.soft-violet {
+  color: var(--clr-soft-violet);
+}
+
+/* ========== COMPONENTS ========== */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.stats__name {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-300);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.stats__number {
+  font-size: var(--fs-500);
+  color: var(--clr-white);
+}
+
+/* ========== MAIN ========== */
+.main {
+  max-width: 1100px;
+  background: var(--clr-dark-desaturated-blue);
+  margin: 2em;
+  border-radius: 0.5em;
+  overflow: hidden;
+  text-align: center;
+}
+
+.main__content {
+  padding: 2.5em 1.5em;
+}
+
+.main__image {
+  background: var(--clr-soft-violet);
+}
+
+.main__image>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+@media only screen and (min-width: 600px) {
+  .main__content {
+    padding: 5em 3.5em;
+  }
+
+  .main__stats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: unset;
+  }
+
+  .main__content {
+    width: 50%;
+    padding: 5em 6em 5em 5em;
+  }
+
+  .main__title {
+    margin-bottom: 0.9em;
+  }
+
+  .main__description {
+    margin-bottom: 4em;
+  }
+}

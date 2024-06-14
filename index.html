@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="main container">
+    <picture class="main__image">
+      <source srcset="images/image-header-desktop.jpg" media="(min-width: 768px)">
+      <img src="images/image-header-mobile.jpg" alt="">
+    </picture>
+    <section class="main__content">
+      <h1 class="main__title">Get <span class="soft-violet">insights</span> that help your business grow.</h1>
+      <p class="main__description">Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        experience, and overall efficiency.</p>
+      <ul class="main__stats stats">
+        <li class="stats__item">
+          <h3 class="stats__name">companies</h3>
+          <strong class="stats__number">10k+</strong>
+        </li>
+        <li class="stats__item">
+          <h3 class="stats__name">templates</h3>
+          <strong class="stats__number">314</strong>
+        </li>
+        <li class="stats__item">
+          <h3 class="stats__name">queries</h3>
+          <strong class="stats__number">12M+</strong>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
